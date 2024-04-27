@@ -9,26 +9,26 @@ This repository is structured to reflect the flow of the presentation, showcasin
 
 ## 📚 Contents
 
-1. **Static Types**
-   - Explore how Rust enforces type safety and the implications of signedness through the `static_types` module.
-   
-2. **Integer Overflow**
-   - Dive into the `integer_overflow` module to see how Rust handles potential overflows and the guarantees it provides to prevent common security vulnerabilities.
+### 1. **Static Types** 🔒
+   - **Enforcing Safety**: Dive into how Rust handles type safety and enforces explicit management of types with examples from the `static_types` module.
 
-3. **Zero-Cost Abstractions**
-   - The `zero_cost_abstraction` module demonstrates how Rust's design patterns, like iterators and message passing, help write safe and efficient code without runtime overhead.
+### 2. **Integer Overflow** 📉
+   - **Preventing Overflows**: Explore how Rust prevents common security vulnerabilities related to integer overflow through the `integer_overflow` module.
 
-4. **Error Handling**
-   - Rust does not have exceptions in the classical sense. See how errors are handled gracefully in the `error_handling` module, ensuring robust applications.
+### 3. **Zero-Cost Abstractions** 🚀
+   - **Efficient Patterns**: See how Rust's zero-cost abstractions like iterators and message passing help write efficient code that's also secure with the `zero_cost_abstraction` module.
 
-5. **Ownership and Borrowing**
-   - One of Rust's cornerstone features is its ownership model. The `borrowing` module illustrates how Rust achieves memory safety without a garbage collector.
+### 4. **Error Handling** 🛠️
+   - **Graceful Failures**: Discover Rust's approach to robust error handling without exceptions by using the `error_handling` module.
 
-6. **Lifetime Tracking**
-   - Understand how Rust uses lifetimes to ensure references do not outlive the data they refer to, preventing dangling references and data races.
+### 5. **Ownership and Borrowing** 🤲
+   - **Memory Safety**: Learn about Rust's innovative ownership model that guarantees memory safety without a garbage collector in the `borrowing` module.
 
-7. **Safe Concurrency**
-   - The `safe_concurrency` module shows how Rust's ownership rules extend to concurrent programming, ensuring that data races are compile-time errors.
+### 6. **Lifetime Tracking** ⏳
+   - **Managing Lifetimes**: Understand how Rust uses lifetimes to prevent dangling references and ensure safe memory access with the `lifetime_tracking` module.
+
+### 7. **Safe Concurrency** 🧵
+   - **Concurrency without Data Races**: Check out how Rust handles concurrency safely, making data races a thing of the past, in the `safe_concurrency` module.
 
 ## 🚀 Getting Started
 
