@@ -24,7 +24,8 @@ pub fn signdness(){
 }
 pub fn i32_in_i64(){
     let smol: i32 = 128;
-    //wont work
+
+    //wont work, wont even compile
     //let big: i64 = smol; 
     
     let big: i64 = smol.into();

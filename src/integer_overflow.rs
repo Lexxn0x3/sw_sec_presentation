@@ -19,9 +19,9 @@ pub fn overflow(){
 }
 pub fn overflow_how_not(){
     //let a: i32 = i32::MAX;
-    let a: i32 = 3;
-    let b = a + 1;  // This line will cause a panic in debug mode or wrap in release mode ->
-                    // deffinetly defined behaviour
+    let a: i32 = 3; //comment out this line and comment in above
+    let b = a + 1;  // This line will cause a panic in debug mode or wrap in release mode -> always defined behaviour
+
     println!("{}", b);
 }
 pub fn overflow_how_not_2(){

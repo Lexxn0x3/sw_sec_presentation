@@ -1,4 +1,8 @@
-pub fn transfer_ownership(){ 
+pub fn copy_type(){
+    let i1 = 32;
+    let i2 = i1;
+}
+pub fn transfer_ownership(){
     let s1 = String::from("Hello");
     let s2 = s1;  // Ownership of the string is transferred from s1 to s2
 
@@ -23,7 +27,8 @@ pub fn try_mut(){
 pub fn mut_reference(){
     let mut s1 = String::from("Hello");
     let mut s2 = &mut s1;  // s2 is a mutable reference to s1
-                       // only 1 mutable reference allowed
+
+    // only 1 mutable reference allowed
     //let s3 = &mut s1;
 
     s2.push_str(", world!"); // Modifying s1 through its mutable reference s2
