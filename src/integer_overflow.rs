@@ -1,4 +1,5 @@
 pub fn overflow(){
+    //To-Do: How to explicitly say overflow is ok here.
     let a: i32 = i32::MAX;
 
     // Checked addition
