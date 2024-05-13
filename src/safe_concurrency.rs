@@ -13,7 +13,10 @@ pub fn create_increment_threads(){
             let mut rng = thread_rng(); // Create a random number generator
             for _ in 0..10 { // Loop to add to the counter 10 times
                 {
-                    let mut num = counter_clone.lock().unwrap();
+                    let mut num = match counter_clone.lock() {
+                        Ok(x) => x,
+                        Err(_) => todo!(),
+                    };
                     *num += 1;
                 } // MutexGuard goes out of scope here, releasing the lock
 
@@ -33,7 +36,7 @@ pub fn create_increment_threads(){
     println!("Final counter value: {}", *counter.lock().unwrap());
 }
 pub fn how_not_to_create_increment_threads(){
-    /*
+/*
     let mut counter = 0;
     //need to use a refence otherwise int will be copied for each thread.
     let counter_ref = &mut counter; // Explicit mutable reference to `counter`

@@ -1,3 +1,19 @@
+pub fn overflow_how_not(){
+    //let a: i32 = i32::MAX;
+    let a: i32 = 3; //comment out this line and comment in above
+    let b = a + 1;  // This line will cause a panic in debug mode or wrap in release mode -> always defined behaviour
+
+    println!("{}", b);
+}
+pub fn overflow_how_not_2(){
+    let mut a: i32 = 1;
+
+    for _ in 1..=1000{
+        a += a;
+    }
+
+    println!("{}", a);
+}
 pub fn overflow(){
     //To-Do: How to explicitly say overflow is ok here.
     let a: i32 = i32::MAX;
@@ -18,20 +34,5 @@ pub fn overflow(){
     let (overflowing_sum, overflowed) = a.overflowing_add(1);
     println!("Overflowing sum: {}, overflowed: {}", overflowing_sum, overflowed);  // Outputs the minimum value for i32 and true
 }
-pub fn overflow_how_not(){
-    //let a: i32 = i32::MAX;
-    let a: i32 = 3; //comment out this line and comment in above
-    let b = a + 1;  // This line will cause a panic in debug mode or wrap in release mode -> always defined behaviour
 
-    println!("{}", b);
-}
-pub fn overflow_how_not_2(){
-    let mut a: i32 = 1;
-    
-    for _i in 1..=1000{
-        a += a;
-    }
-
-    println!("{}", a);
-}
 

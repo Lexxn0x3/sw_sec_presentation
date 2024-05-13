@@ -1,10 +1,20 @@
+pub fn i32_in_i64(){
+    let smol: i32 = 128;
+
+    //wont work, wont even compile
+    //let big: i64 = smol; 
+
+    let big: i64 = smol.into();
+
+    println!("i32 in i64: {}", big);
+}
 pub fn signdness(){
     let unsigned_val: u32 = 150;
     let signed_val: i32 = -100;
 
     //will panic
     //let signed: i32 = unsigned_val;
-    //let unsigned u32 = signed_val;
+    //let unsigned: u32 = signed_val;
 
     // Explicit casting from unsigned to signed (safe in this context)
     let signed_from_unsigned: i32 = unsigned_val as i32;
@@ -22,13 +32,4 @@ pub fn signdness(){
     };
     println!("Safely converted Unsigned from Signed: {}", safe_unsigned_from_signed);
 }
-pub fn i32_in_i64(){
-    let smol: i32 = 128;
 
-    //wont work, wont even compile
-    //let big: i64 = smol; 
-    
-    let big: i64 = smol.into();
-
-    println!("i32 in i64: {}", big);
-}

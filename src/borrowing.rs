@@ -1,6 +1,8 @@
 pub fn copy_type(){
     let i1 = 32;
     let i2 = i1;
+    
+    println!("{}, {}", i1, i2);
 }
 pub fn transfer_ownership(){
     let s1 = String::from("Hello");
